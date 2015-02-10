@@ -20,9 +20,9 @@ Each entity defines a "self.age" value, if that value is nil then it sets it to 
 It seems that the self.age value is not nil when a new object is created, possibly it has the value of a previous instance.
 
 # Notable Files 
-[Scripts/SceneScript.lua](Scripts/SceneScript.lua) - spawns the cubes
+[SceneScript.lua](Assets/Scripts/SceneScript.lua) - spawns the cubes
 
-[Scripts/EntityScript.lua](Scripts/EntityScript.lua) - script for each entity that is spawned that handles removal of itself
+[EntityScript.lua](Assets/Scripts/EntityScript.lua) - script for each entity that is spawned that handles removal of itself
 
 # Other notes
 
