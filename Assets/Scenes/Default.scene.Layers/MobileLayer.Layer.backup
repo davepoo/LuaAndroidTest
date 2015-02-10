@@ -1,0 +1,494 @@
+﻿# YAML
+bool: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+byte: System.Byte, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+CSharpFramework.BaseTypes.Color4: CSharpFramework.BaseTypes.Color4, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.BaseTypes.ProfileEnum: CSharpFramework.BaseTypes.ProfileEnum, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.DynamicProperties.DynamicEnumPropertyType: CSharpFramework.DynamicProperties.DynamicEnumPropertyType, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.DynamicProperties.DynamicProperty: CSharpFramework.DynamicProperties.DynamicProperty, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.DynamicProperties.DynamicPropertyCollectionType.DynamicPropertyCollectionFlags_e: CSharpFramework.DynamicProperties.DynamicPropertyCollectionType+DynamicPropertyCollectionFlags_e, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.DynamicProperties.DynamicPropertyType: CSharpFramework.DynamicProperties.DynamicPropertyType, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Layer: CSharpFramework.Layer, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Math.Vector3F: CSharpFramework.Math.Vector3F, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.PropertyEditors.FlagsInt32_e: CSharpFramework.PropertyEditors.FlagsInt32_e, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Scene.ShapeComponent: CSharpFramework.Scene.ShapeComponent, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Scene.ShapeComponentCollection: CSharpFramework.Scene.ShapeComponentCollection, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Scene.ShapeComponentType: CSharpFramework.Scene.ShapeComponentType, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.ShapeCollection: CSharpFramework.ShapeCollection, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Shapes.LinkCollection: CSharpFramework.Shapes.LinkCollection, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Shapes.LinkTargetTriggerComponent: CSharpFramework.Shapes.LinkTargetTriggerComponent, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Shapes.ShapeBase: CSharpFramework.Shapes.ShapeBase, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Shapes.ShapeBase.HintFlags_e: CSharpFramework.Shapes.ShapeBase+HintFlags_e, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+float: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+int: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+long: System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+short: System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+string: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+string[]: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.ArrayList: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.List<string>: System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Drawing.Color: System.Drawing.Color, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.RuntimeType: System.RuntimeType, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Type: System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+uint: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+VisionEditorPlugin.Shapes.DynLightShape: VisionEditorPlugin.Shapes.DynLightShape, VisionEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+VisionEditorPlugin.Shapes.DynLightShape.LightAttenuationCurve_e: VisionEditorPlugin.Shapes.DynLightShape+LightAttenuationCurve_e, VisionEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+VisionEditorPlugin.Shapes.DynLightShape.LightType_e: VisionEditorPlugin.Shapes.DynLightShape+LightType_e, VisionEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+VisionManaged.ShadowCasterGeometryTypes_e: VisionManaged.ShadowCasterGeometryTypes_e, VisionManaged, Version=2014.1.0.38584, Culture=neutral, PublicKeyToken=null
+...
+---
+- &8a1392b36f5e49fcaabb611646f9ba39 !CSharpFramework.Layer
+  LayerFileVersion: !int 1
+  _layerName: !string MobileLayer
+  _activeShape: *5603702c561d45b5af5198ad9976da4e
+  _rootShape: *5603702c561d45b5af5198ad9976da4e
+  _bVisible: !bool True
+  _bExport: !bool True
+  _visibleInProfile: *114226b0fd154da6826f2dd4fc78b78e
+  _bShapesSelectable: !bool True
+  _layerDescription: null
+  SortingOrder: !int 2
+  _iCurrentShapeID: !uint 2
+  _bIncludeInNavMesh: !bool True
+- &114226b0fd154da6826f2dd4fc78b78e !CSharpFramework.BaseTypes.ProfileEnum
+  _profiles: !System.Collections.Generic.List%3Cstring%3E
+  - !string android
+  - !string ios
+  _allProfiles: !bool False
+- &15e27c3ca98a2f6a186765f99c8966d4 !CSharpFramework.Scene.ShapeComponentType
+  _propertyTypes: !System.Collections.ArrayList
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string ComponentID
+    _nativeType: !System.Type string
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Enabled
+    _nativeType: !System.Type bool
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string GeometryTypes
+    _nativeType: !System.Type VisionManaged.ShadowCasterGeometryTypes_e
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string UseQuarterSizeShadowTexture
+    _nativeType: !System.Type bool
+  - !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+    _name: !string ShadowMappingMode
+    _nativeType: !System.Type string
+    _enumValues: !string[]
+    - !string PCF4
+    - !string PCF8
+    - !string PCF8 randomized
+    - !string PCF16
+    - !string PCF16 randomized
+    - !string PCSS16
+    - !string PCSS16 randomized
+    - !string CHS
+    - !string DEBUG
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string ShadowMapSize
+    _nativeType: !System.Type int
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SampleRadius
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SampleRadiusScaleWithDistance
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string MaxDistanceToBlocker
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string UseSurfaceSpecificShadowShaders
+    _nativeType: !System.Type bool
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Bias[0]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SlopeScaled[0]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Bias[1]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SlopeScaled[1]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Bias[2]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SlopeScaled[2]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Bias[3]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string SlopeScaled[3]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string FilterBitmask
+    _nativeType: !System.Type int
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string NearClip
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string AmbientColor
+    _nativeType: !System.Type CSharpFramework.BaseTypes.Color4
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string ShadowBoxExtrudeMultiplier
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string FrontFacingShadows
+    _nativeType: !System.Type bool
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string CascadeCount
+    _nativeType: !System.Type int
+  - !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+    _name: !string CascadeSelection
+    _nativeType: !System.Type string
+    _enumValues: !string[]
+    - !string By Interval
+    - !string By Bounding Box
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string CascadeRange[0]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string CascadeRange[1]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string CascadeRange[2]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string CascadeRange[3]
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string OverestimateCascades
+    _nativeType: !System.Type bool
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string FadeOutStart
+    _nativeType: !System.Type float
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string FadeOutEnd
+    _nativeType: !System.Type float
+  _uniqueName: !string VMobileShadowMapComponentSpotDirectional
+  _flags: !CSharpFramework.DynamicProperties.DynamicPropertyCollectionType.DynamicPropertyCollectionFlags_e None
+- &81c455055b63f9ad9f5db69156af9651 !CSharpFramework.Scene.ShapeComponentType
+  _propertyTypes: !System.Collections.ArrayList
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string ComponentID
+    _nativeType: !System.Type string
+  - !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+    _name: !string AttachmentType
+    _nativeType: !System.Type string
+    _enumValues: !string[]
+    - !string SUNLIGHT
+    - !string MOONLIGHT
+    - !string CORONA
+    - !string SUNBACKLIGHT
+    - !string ENABLEDATNIGHT
+  - !CSharpFramework.DynamicProperties.DynamicPropertyType
+    _name: !string Intensity
+    _nativeType: !System.Type float
+  _uniqueName: !string VTimeOfDayComponent
+  _flags: !CSharpFramework.DynamicProperties.DynamicPropertyCollectionType.DynamicPropertyCollectionFlags_e None
+- &91da739f523e44318ee3a57306398d3c !CSharpFramework.Shapes.LinkTargetTriggerComponent
+  _ownerShape: *df5b4b542dcf42f5b591968ae621fad5
+  _linkName: !string ToggleOn
+  _primaryStringId: !string ToggleOn
+  _hotspotIconFilename: !string Bitmaps\Shapes\link_target.png
+  _linkPaths: !System.Collections.ArrayList []
+- &cc84d88e202e4fd3a47b03696c26c35a !CSharpFramework.Shapes.LinkTargetTriggerComponent
+  _ownerShape: *df5b4b542dcf42f5b591968ae621fad5
+  _linkName: !string ToggleOff
+  _primaryStringId: !string ToggleOff
+  _hotspotIconFilename: !string Bitmaps\Shapes\link_target.png
+  _linkPaths: !System.Collections.ArrayList []
+- &5603702c561d45b5af5198ad9976da4e !CSharpFramework.Shapes.ShapeBase
+  _shapeName: !string root
+  _parentLayer: *8a1392b36f5e49fcaabb611646f9ba39
+  _childCollectionGeneric: !CSharpFramework.ShapeCollection
+  - *df5b4b542dcf42f5b591968ae621fad5
+  _parentShape: null
+  _hintFlags: !CSharpFramework.Shapes.ShapeBase.HintFlags_e AddedToScene
+  _bVisible: !bool True
+  _linkSources: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList []
+  _linkTargets: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList []
+  _linkBidirections: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList []
+  _iLocalID: !uint 1
+  _userDataString: null
+- &df5b4b542dcf42f5b591968ae621fad5 !VisionEditorPlugin.Shapes.DynLightShape
+  _shapeName: !string Sunlight
+  _parentLayer: *8a1392b36f5e49fcaabb611646f9ba39
+  _childCollectionGeneric: !CSharpFramework.ShapeCollection []
+  _parentShape: *5603702c561d45b5af5198ad9976da4e
+  _hintFlags: !CSharpFramework.Shapes.ShapeBase.HintFlags_e OnlyUniformScale, AddedToScene, AutoRenamingEnabled
+  _bVisible: !bool True
+  _linkSources: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList []
+  _linkTargets: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList
+    - *91da739f523e44318ee3a57306398d3c
+    - *cc84d88e202e4fd3a47b03696c26c35a
+  _linkBidirections: !CSharpFramework.Shapes.LinkCollection
+    CollectionBase+list: !System.Collections.ArrayList []
+  _iLocalID: !uint 2
+  _userDataString: null
+  _componentList: !CSharpFramework.Scene.ShapeComponentCollection
+  - !CSharpFramework.Scene.ShapeComponent
+    _collectionType: *81c455055b63f9ad9f5db69156af9651
+    _properties: !System.Collections.ArrayList
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !string 
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string ComponentID
+        _nativeType: !System.Type string
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !string SUNLIGHT
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+        _name: !string AttachmentType
+        _nativeType: !System.Type string
+        _enumValues: !string[]
+        - !string SUNLIGHT
+        - !string MOONLIGHT
+        - !string CORONA
+        - !string SUNBACKLIGHT
+        - !string ENABLEDATNIGHT
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0.3
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Intensity
+        _nativeType: !System.Type float
+    _bRemovable: !bool True
+    _bActive: !bool True
+    _bVisible: !bool True
+    _bEditable: !bool True
+    _bCreatedByNative: !bool False
+  - !CSharpFramework.Scene.ShapeComponent
+    _collectionType: *15e27c3ca98a2f6a186765f99c8966d4
+    _properties: !System.Collections.ArrayList
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !string 
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string ComponentID
+        _nativeType: !System.Type string
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !bool True
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Enabled
+        _nativeType: !System.Type bool
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !int 14
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string GeometryTypes
+        _nativeType: !System.Type VisionManaged.ShadowCasterGeometryTypes_e
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !bool False
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string UseQuarterSizeShadowTexture
+        _nativeType: !System.Type bool
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !string PCF4
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+        _name: !string ShadowMappingMode
+        _nativeType: !System.Type string
+        _enumValues: !string[]
+        - !string PCF4
+        - !string PCF8
+        - !string PCF8 randomized
+        - !string PCF16
+        - !string PCF16 randomized
+        - !string PCSS16
+        - !string PCSS16 randomized
+        - !string CHS
+        - !string DEBUG
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !int 256
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string ShadowMapSize
+        _nativeType: !System.Type int
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 2
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SampleRadius
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SampleRadiusScaleWithDistance
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 1000
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string MaxDistanceToBlocker
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !bool False
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string UseSurfaceSpecificShadowShaders
+        _nativeType: !System.Type bool
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 20
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Bias[0]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SlopeScaled[0]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 6
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Bias[1]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SlopeScaled[1]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 18
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Bias[2]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SlopeScaled[2]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 54
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string Bias[3]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 0
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string SlopeScaled[3]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !int 65535
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string FilterBitmask
+        _nativeType: !System.Type int
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 2
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string NearClip
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !CSharpFramework.BaseTypes.Color4
+        _r: !byte 128
+        _g: !byte 128
+        _b: !byte 128
+        _a: !byte 255
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string AmbientColor
+        _nativeType: !System.Type CSharpFramework.BaseTypes.Color4
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 1.5
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string ShadowBoxExtrudeMultiplier
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !bool False
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string FrontFacingShadows
+        _nativeType: !System.Type bool
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !int 2
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string CascadeCount
+        _nativeType: !System.Type int
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !string By Interval
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicEnumPropertyType
+        _name: !string CascadeSelection
+        _nativeType: !System.Type string
+        _enumValues: !string[]
+        - !string By Interval
+        - !string By Bounding Box
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 850
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string CascadeRange[0]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 3000
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string CascadeRange[1]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 9000
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string CascadeRange[2]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float 27000
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string CascadeRange[3]
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !bool True
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string OverestimateCascades
+        _nativeType: !System.Type bool
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float -1
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string FadeOutStart
+        _nativeType: !System.Type float
+    - !CSharpFramework.DynamicProperties.DynamicProperty
+      _value: !float -1
+      _propertyType: !CSharpFramework.DynamicProperties.DynamicPropertyType
+        _name: !string FadeOutEnd
+        _nativeType: !System.Type float
+    _bRemovable: !bool True
+    _bActive: !bool True
+    _bVisible: !bool True
+    _bEditable: !bool True
+    _bCreatedByNative: !bool False
+  _orientation: !CSharpFramework.Math.Vector3F
+    X: !float 0
+    Y: !float 0
+    Z: !float 0
+  _scale: !CSharpFramework.Math.Vector3F
+    X: !float 1
+    Y: !float 1
+    Z: !float 1
+  _position: !CSharpFramework.Math.Vector3F
+    X: !float 200
+    Y: !float -790
+    Z: !float 700
+  _textLabel: null
+  _objectKey: null
+  _lightColor: !System.Drawing.Color
+    name: null
+    value: !long 4294967295
+    knownColor: !short 0
+    state: !short 2
+  _fIntensity: !float 1000
+  _lightType: !VisionEditorPlugin.Shapes.DynLightShape.LightType_e Directional
+  _fSpotAngle: !float 45
+  _sProjectedTexture: null
+  _bModelShadows: !bool True
+  _bWorldShadows: !bool True
+  _colorAnimTable: null
+  _fAnimTiming: !float 1
+  _fAnimPhase: !float 0
+  _iWorldInfluence: !int 255
+  _iObjectInfluence: !int 255
+  _iVisibleBitmask: !CSharpFramework.PropertyEditors.FlagsInt32_e All
+  _bStatic: !bool False
+  _bPreviewStatic: !bool True
+  _bTurnOffAfterLighting: !bool True
+  _bExportWhenNotRelevant: !bool False
+  _bBakedToLightmap: !bool False
+  _sLightAttenuationTex: !string Atten\smooth.dds
+  _eLightAttenuationCurve: !VisionEditorPlugin.Shapes.DynLightShape.LightAttenuationCurve_e Smooth
+  _lightMultiplier: !float 1
+  _fFadeStart: !float 0
+  _fFadeEnd: !float 0
+  _bTriggered: !bool True
+  _bUseSpecular: !bool True
+  _bRemoveLightAfterAnim: !bool False
+  SupportScaling: !bool True
+...

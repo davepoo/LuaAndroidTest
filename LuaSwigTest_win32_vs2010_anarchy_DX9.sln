@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaSwigTestAppDX9", "Source\LuaSwigTestApp\LuaSwigTestAppDX9_win32_vs2010_anarchy.vcxproj", "{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5843C197-7531-495E-95D9-2033A04BC440} = {5843C197-7531-495E-95D9-2033A04BC440}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaSwigTestEnginePluginDX9", "Source\LuaSwigTestEnginePlugin\LuaSwigTestEnginePluginDX9_win32_vs2010_anarchy.vcxproj", "{5843C197-7531-495E-95D9-2033A04BC440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vision", "Vision", "{460876BE-D980-48D9-81B2-24A35378E08B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{D6663278-F4A5-48F1-8651-B3B7B29BB68C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{2A873D9F-D589-45C6-B926-E76127CF5013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|win32 = Debug|win32
+		Dev|win32 = Dev|win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Debug|win32.ActiveCfg = Debug|win32
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Debug|win32.Build.0 = Debug|win32
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Dev|win32.ActiveCfg = Dev|win32
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Dev|win32.Build.0 = Dev|win32
+		{5843C197-7531-495E-95D9-2033A04BC440}.Debug|win32.ActiveCfg = Debug|win32
+		{5843C197-7531-495E-95D9-2033A04BC440}.Debug|win32.Build.0 = Debug|win32
+		{5843C197-7531-495E-95D9-2033A04BC440}.Dev|win32.ActiveCfg = Dev|win32
+		{5843C197-7531-495E-95D9-2033A04BC440}.Dev|win32.Build.0 = Dev|win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{460876BE-D980-48D9-81B2-24A35378E08B} = {A2AFBB9D-C357-4661-8FF1-EFF93CB1612B}
+		{D6663278-F4A5-48F1-8651-B3B7B29BB68C} = {460876BE-D980-48D9-81B2-24A35378E08B}
+		{2A873D9F-D589-45C6-B926-E76127CF5013} = {D6663278-F4A5-48F1-8651-B3B7B29BB68C}
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950} = {2A873D9F-D589-45C6-B926-E76127CF5013}
+		{5843C197-7531-495E-95D9-2033A04BC440} = {2A873D9F-D589-45C6-B926-E76127CF5013}
+	EndGlobalSection
+EndGlobal

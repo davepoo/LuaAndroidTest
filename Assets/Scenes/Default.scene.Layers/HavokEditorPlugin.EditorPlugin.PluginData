@@ -1,0 +1,40 @@
+﻿# YAML
+bool: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+float: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+HavokEditorPlugin.HavokPhysicsPanel.HavokPhysicsPanelSettings: HavokEditorPlugin.HavokPhysicsPanel+HavokPhysicsPanelSettings, HavokEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+int: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.ArrayList: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Type: System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+uint: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+...
+---
+- &86f4160ef89041d286a3855e83bb1782 !System.Collections.ArrayList
+  - !HavokEditorPlugin.HavokPhysicsPanel.HavokPhysicsPanelSettings
+    HavokToVisionScale: !float 100
+    HavokStaticGeomMode: !int 0
+    HavokMergedStaticWeldingType: !int 0
+    HavokAutoBroadPhase: !bool False
+    HavokManualBroadPhaseSize: !float 200000
+    HavokGravityX: !float 0
+    HavokGravityY: !float 0
+    HavokGravityZ: !float -981.000061
+    HavokDiskShapeCaching: !bool True
+    HavokDisableConstrainedBodiesCollisions: !bool False
+    HavokEnableLegacyCompoundShapes: !bool False
+    Dynamic: !uint 4294967198
+    Static: !uint 4294967198
+    Terrain: !uint 4294967198
+    Controller: !uint 4294967198
+    Ragdoll: !uint 4294967198
+    Attachments: !uint 4294967198
+    Foot_IK: !uint 4294967198
+    Debris: !uint 4294967198
+    Decoration: !uint 4294967198
+    Custom0: !uint 4294967198
+    Custom1: !uint 4294967198
+    Custom2: !uint 4294967198
+    Custom3: !uint 4294967198
+    Custom4: !uint 4294967198
+    HavokSolverIterations: !int 4
+    HavokSolverHardness: !int 1
+...

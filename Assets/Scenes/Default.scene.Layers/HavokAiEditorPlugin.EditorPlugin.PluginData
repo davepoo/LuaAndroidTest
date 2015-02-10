@@ -1,0 +1,99 @@
+﻿# YAML
+bool: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+float: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+HavokAiEditorPlugin.Shapes.eCharacterWidthUsage: HavokAiEditorPlugin.Shapes.eCharacterWidthUsage, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.eEdgeMatchingMetric: HavokAiEditorPlugin.Shapes.eEdgeMatchingMetric, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.eShelverType: HavokAiEditorPlugin.Shapes.eShelverType, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.eSplitGenerationMethod: HavokAiEditorPlugin.Shapes.eSplitGenerationMethod, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.eTerrainLOD: HavokAiEditorPlugin.Shapes.eTerrainLOD, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.eVertexSelectionMethod: HavokAiEditorPlugin.Shapes.eVertexSelectionMethod, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings: HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettingsDictionary: HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettingsDictionary, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+int: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+string: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.ArrayList: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.Dictionary<string, HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings>: System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.GenericEqualityComparer<string>: System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.KeyValuePair<string, HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings>: System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.KeyValuePair<string, HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings>[]: System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings, HavokAiEditorPlugin.EditorPlugin, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null]][], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Type: System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+...
+---
+- &43407e2dc25f4b4d9040d66e564829ea !System.Collections.ArrayList
+  - *a12ae31dba35488abe177201ad2903ec
+- &39e3fb5334e44e8abb51a3f9b8a70531 !HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings
+  Parent: *a12ae31dba35488abe177201ad2903ec
+  Name: !string GlobalSettings
+  CharacterHeight: !float 1.75
+  MaxWalkableSlope: !float 60
+  MinRegionArea: !float 5
+  MinDistanceToSeedPoints: !float 1
+  BorderPreservationTolerance: !float 0
+  MinCharacterWidth: !float 0
+  CharacterWidthUsage: !HavokAiEditorPlugin.Shapes.eCharacterWidthUsage BlockEdges
+  RestrictToZoneGeometry: !bool True
+  TerrainLOD: !HavokAiEditorPlugin.Shapes.eTerrainLOD High
+  QuantizationGridSize: !float 0.0078125
+  DegenerateAreaThreshold: !float 0
+  DegenerateWidthThreshold: !float 0.005
+  ConvexThreshold: !float 0.1
+  MaxNumEdgesPerFace: !int 255
+  WeldInputVertices: !bool True
+  WeldThreshold: !float 0.01
+  VertexSelectionMethod: !HavokAiEditorPlugin.Shapes.eVertexSelectionMethod PROPORTIONAL_TO_AREA
+  AreaFraction: !float 0.000125
+  VertexFraction: !float 0.025
+  EdgeConnectionIterations: !int 2
+  EdgeMatchingMetric: !HavokAiEditorPlugin.Shapes.eEdgeMatchingMetric OrderByDistance
+  MaxStepHeight: !float 0.5
+  MaxSeparation: !float 0.1
+  MaxOverhang: !float 0.01
+  PlanarAlignmentAngle: !float 5
+  VerticalAlignmentAngle: !float 60
+  MinEdgeOverlap: !float 0.02
+  EnableSimplification: !bool True
+  MaxBorderSimplifyArea: !float 1.5
+  MaxConcaveBorderSimplifyArea: !float 0.15
+  UseHeightPartitioning: !bool False
+  MaxPartitionHeightError: !float 100
+  MinCorridorWidth: !float 0.4
+  MaxCorridorWidth: !float 0.6
+  HoleReplacementArea: !float 1
+  MaxLoopShrinkFraction: !float 0.75
+  MaxBorderHeightError: !float 1.5
+  MaxBorderDistanceError: !float 2
+  MaxPartitionSize: !int 40000
+  UseConservativeHeightPartitioning: !bool False
+  HertelMehlhornHeightError: !float 0.01
+  PlanarityThreshold: !float 8.11
+  NonconvexityThreshold: !float 0.1
+  BoundaryEdgeFilterThreshold: !float 0.01
+  MaxSharedVertexHorizontalError: !float 1
+  MaxSharedVertexVerticalError: !float 1
+  MaxBoundaryVertexHorizontalError: !float 1
+  MaxBoundaryVertexVerticalError: !float 1
+  MergeLongestEdgesFirst: !bool True
+  NumTilesX: !int 1
+  NumTilesY: !int 1
+  SplitGenerationMethod: !HavokAiEditorPlugin.Shapes.eSplitGenerationMethod SimplifyIndividually
+  ShelverType: !HavokAiEditorPlugin.Shapes.eShelverType StoreInMemory
+  LinkEdgeMatchTolerance: !float 0.1
+  LinkMaxStepHeight: !float 0.5
+  LinkMaxSeparation: !float 0.1
+  LinkMaxOverhang: !float 0.01
+  LinkPlanarAlignmentAngle: !float 5
+  LinkVerticalAlignmentAngle: !float 60
+  LinkMinEdgeOverlap: !float 0.02
+  ConnectNavToPhysics: !bool False
+- &a12ae31dba35488abe177201ad2903ec !HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettingsDictionary
+  SettingsDictionary: !System.Collections.Generic.Dictionary%3Cstring,%20HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings%3E
+    Version: !int 1
+    Comparer: *ab59fa6b637147ed8ad5bac7c94e0dfd
+    HashSize: !int 3
+    KeyValuePairs: !System.Collections.Generic.KeyValuePair%3Cstring,%20HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings%3E[]
+    - !System.Collections.Generic.KeyValuePair%3Cstring,%20HavokAiEditorPlugin.Shapes.HavokNavMeshGlobalSettings%3E
+      key: !string GlobalSettings
+      value: *39e3fb5334e44e8abb51a3f9b8a70531
+  DefaultSettingsName: !string GlobalSettings
+- &ab59fa6b637147ed8ad5bac7c94e0dfd !System.Collections.Generic.GenericEqualityComparer%3Cstring%3E {}
+...

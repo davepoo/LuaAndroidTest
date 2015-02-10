@@ -1,0 +1,48 @@
+﻿# YAML
+bool: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+CSharpFramework.BaseTypes.ProfileEnum: CSharpFramework.BaseTypes.ProfileEnum, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.Scene.SceneExportProfile: CSharpFramework.Scene.SceneExportProfile, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+int: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+string: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.ArrayList: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.Dictionary<string, bool>: System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.GenericEqualityComparer<string>: System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Generic.List<string>: System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Collections.Specialized.StringCollection: System.Collections.Specialized.StringCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Type: System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+uint: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+...
+---
+- &5e7012d8a7d04ed8860ac9d2929ea7a3 !CSharpFramework.Scene.SceneExportProfile
+  ExportPath: !string Scenes\Default.vscene
+  RunAfterExport: !bool False
+  IncludeVisibilityInfo: !bool True
+  EmbedCustomLitFile: !bool False
+  UpdateAssetTransformations: !bool True
+  InvisibleLayersExportInvisibleObjects: !bool True
+  LoadedZonesOnly: !bool False
+  ExportFlags: !uint 4294967295
+  ExportedLayerNames: !System.Collections.Specialized.StringCollection
+    data: !System.Collections.ArrayList
+    - !string Main layer
+    - !string MobileLayer
+    - !string PcLayer
+  ExportedZoneNames: !System.Collections.Specialized.StringCollection
+    data: !System.Collections.ArrayList []
+  PluginsUserSelection: !System.Collections.Generic.Dictionary%3Cstring,%20bool%3E
+    Version: !int 0
+    Comparer: *d43d95decbfa471f9f53514a00f34b7f
+    HashSize: !int 0
+  SelectedAssetProfiles: *cbc92818527540d09c1d905b9cc81e27
+  _allLayerNames: !System.Collections.Specialized.StringCollection
+    data: !System.Collections.ArrayList
+    - !string Main layer
+    - !string MobileLayer
+    - !string PcLayer
+  _allZoneNames: !System.Collections.Specialized.StringCollection
+    data: !System.Collections.ArrayList []
+- &cbc92818527540d09c1d905b9cc81e27 !CSharpFramework.BaseTypes.ProfileEnum
+  _profiles: !System.Collections.Generic.List%3Cstring%3E []
+  _allProfiles: !bool True
+- &d43d95decbfa471f9f53514a00f34b7f !System.Collections.Generic.GenericEqualityComparer%3Cstring%3E {}
+...

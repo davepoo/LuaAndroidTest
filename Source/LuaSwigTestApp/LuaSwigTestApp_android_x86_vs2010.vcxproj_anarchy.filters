@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="NDKROOT\sources">
+        <UniqueIdentifier>1D502378-D502-481D-0237-1D5023781D50</UniqueIdentifier>
+        <DeploymentContent>False</DeploymentContent></Filter>
+    <Filter Include="NDKROOT\sources\android">
+        <UniqueIdentifier>1B343B1F-B343-4F1B-43B1-1B343B1F1B34</UniqueIdentifier>
+        <DeploymentContent>False</DeploymentContent></Filter>
+    <Filter Include="Android">
+        <UniqueIdentifier>25F7049A-5F70-4A25-7049-25F7049A25F7</UniqueIdentifier>
+        <DeploymentContent>False</DeploymentContent></Filter>
+    <Filter Include="NDKROOT">
+        <UniqueIdentifier>1E9E5DDE-E9E5-4E1E-E5DD-1E9E5DDE1E9E</UniqueIdentifier>
+        <DeploymentContent>False</DeploymentContent></Filter>
+    <Filter Include="NDKROOT\sources\android\native_app_glue">
+        <UniqueIdentifier>4820E52E-820E-4E48-0E52-4820E52E4820</UniqueIdentifier>
+        <DeploymentContent>False</DeploymentContent></Filter>
+
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+        <Filter></Filter>
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+    <ClCompile Include="$(NDKROOT)\sources\android\native_app_glue\android_native_app_glue.c">
+        <Filter>NDKROOT\sources\android\native_app_glue</Filter>
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+    <ClCompile Include="GameApplicationPCH.cpp">
+        <Filter></Filter>
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+    <Java Include="Android/VirtualKeyboardActivity.java">
+        <Filter>Android</Filter>
+        <DeploymentContent>False</DeploymentContent></Java>
+    <Java Include="Android/VNativeDialogAndroid.java">
+        <Filter>Android</Filter>
+        <DeploymentContent>False</DeploymentContent></Java>
+    <ClInclude Include="GameApplicationPCH.h">
+        <Filter></Filter>
+        <DeploymentContent>False</DeploymentContent></ClInclude>
+
+  </ItemGroup>
+</Project>

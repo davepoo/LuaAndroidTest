@@ -1,0 +1,77 @@
+#
+#
+# Confidential Information of Telekinesys Research Limited (t/a Havok). Not for disclosure or distribution without Havok's
+# prior written consent. This software contains code, techniques and know-how which is confidential and proprietary to Havok.
+# Product and Trade Secret source code contains trade secrets of Havok. Havok Software (C) Copyright 1999-2014 Telekinesys Research Limited t/a Havok. All Rights Reserved. Use of this software is subject to the terms of an end user license agreement.
+#
+#
+
+from BuildSettings.Platform import *
+from BuildSettings.Vision.Common import *
+from BuildSettings.Vision.EnginePlugin import *
+from BuildSettings.Vision.Dist import *
+from BuildSettings.Vision.ThirdParty.Fmod import *
+
+initEnginePlugin()
+
+addParserExcludeDir('.')
+
+# With the use of the property sheets the PCH compilation is not properly configured. Disable for now
+#setPchFile("LuaSwigTestEnginePluginPCH.h")
+#setPchCpp("LuaSwigTestEnginePluginPCH.cpp")
+
+setGuid("754e509c-f5d1-4b26-9844-cb090ffce67a")
+setCommonSettings()
+setPrefix("")
+setTargetName(getEnginePluginTargetName("LuaSwigTestEnginePlugin"))
+if usage in ("release", "external"):
+    setTemplateModule()
+
+# output directories relative to template directory, not SDK
+setCustomIntermediateDir("../../%s" % getVisionObjDirectory(platform, compiler, compilerVersion, linktype, rootRel=False))
+
+if isWindows():
+    # Use property sheet for majority of settings. So they don't need to be defined here.
+    setPropertySheet(getPropertySheetName("EnginePlugin"))
+    setType('dll')
+    setCustomOutputDir("../../%s" % getVisionBinDirectory(platform, compiler, compilerVersion, linktype, renderer, rootRel=False))
+elif isIOS():
+    if usage in ("release", "external"):
+        addIncludePath("$(VISION_SDK)/Source")
+        addLibraryPath("$(VISION_SDK)/%s" % getVisionLibDirectory(platform, compiler, compilerVersion, linktype))
+    else:
+        addIncludePath("./" + REL_HAVOK_ROOT + "/Source")
+        addLibraryPath("./" + REL_HAVOK_ROOT + "/%s" % getVisionLibDirectory(platform, compiler, compilerVersion, linktype, rootRel=False))
+
+    setType('lib')
+    setCustomOutputDir("../../%s" % getVisionLibDirectory(platform, compiler, compilerVersion, linktype, rootRel=False))
+    setCommonSettings()
+    initEnginePlugin()
+    for path in getFmodIncludePaths():
+        addIncludePath( path )
+    addDefine("USE_HAVOK")
+    
+elif isAndroid() or isTizen():
+    # Use property sheet for majority of settings. So they don't need to be defined here.
+    setPropertySheet(getPropertySheetName("EnginePlugin"))
+    setType('lib')
+    setCustomOutputDir("../../%s" % getVisionLibDirectory(platform, compiler, compilerVersion, linktype, rootRel=False))
+
+
+if usage and usage in ("release", "external"):
+    setPackageBuildLinktypes([])
+
+#
+# Havok SDK - Base file, BUILD(#20140801)
+# 
+# Confidential Information of Havok.  (C) Copyright 1999-2014
+# Telekinesys Research Limited t/a Havok. All Rights Reserved. The Havok
+# Logo, and the Havok buzzsaw logo are trademarks of Havok.  Title, ownership
+# rights, and intellectual property rights in the Havok software remain in
+# Havok and/or its suppliers.
+# 
+# Use of this software for evaluation purposes is subject to and indicates
+# acceptance of the End User licence Agreement for this product. A copy of
+# the license is included with this software and is also available from salesteam@havok.com.
+# 
+#

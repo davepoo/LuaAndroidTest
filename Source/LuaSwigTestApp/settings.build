@@ -1,0 +1,188 @@
+#
+#
+# Confidential Information of Telekinesys Research Limited (t/a Havok). Not for disclosure or distribution without Havok's
+# prior written consent. This software contains code, techniques and know-how which is confidential and proprietary to Havok.
+# Product and Trade Secret source code contains trade secrets of Havok. Havok Software (C) Copyright 1999-2014 Telekinesys Research Limited t/a Havok. All Rights Reserved. Use of this software is subject to the terms of an end user license agreement.
+#
+#
+
+from BuildSettings.Platform import *
+from BuildSettings.Vision.Common import *
+from BuildSettings.Resources import *
+from BuildSettings.Vision.Dist import *
+from BuildSettings.Vision.ThirdParty.FMod import *
+from BuildSettings.Vision.ThirdParty.Scaleform import *
+from BuildSettings.Havok import *
+from BuildSettings.Vision.SampleApp import *
+from BuildSettings.Vision.App import *
+
+
+addParserExcludeDir('.')
+
+setType('exe')
+setPrefix("")
+
+# With the use of the property sheets the PCH compilation is not properly configured. Disable for now
+#setPchFile("LuaSwigTestAppPCH.h")
+#setPchCpp("LuaSwigTestAppPCH.cpp")
+
+setTargetName("LuaSwigTestApp")
+if usage in ("release", "external"):
+    setTemplateModule()
+
+setGuid("d98e8b3f-985a-40cf-99d1-140e56c1f0b0")
+
+# project references
+
+RESOURCE_KWARGS = {}
+RESOURCES = [("../../Data/Vision/Base/", "Data/Vision/Base/"), ("../../Assets/", "Assets/")]
+
+# set output directory relative to template, not SDK
+setCustomOutputDir("../../%s" % getVisionBinDirectory(platform, compiler, compilerVersion, linktype, renderer, rootRel=False))
+setCustomIntermediateDir("../../%s" % getVisionObjDirectory(platform, compiler, compilerVersion, linktype, rootRel=False))
+
+# platform-specific defines
+if isWindows():
+    # Use property sheet for majority of settings. So they don't need to be defined here.
+    setPropertySheet(getPropertySheetName("Application"))
+    configureModule("subSystem", "Windows")
+    addRuntimeDependency("Source/Vision/Samples/Templates/Project_Template/Source/LuaSwigTestEnginePlugin")
+elif isIOS():
+    def addLinkDependency(modulePath):
+        """
+        Xcode project generation is configured to treat addRuntimeDependency as linker
+        dependencies for template modules. No project reference will be added to that
+        module and the binary will be expected to exist in a library search path.
+        """
+        setTemplateModule()
+        addRuntimeDependency(modulePath)
+
+    initSampleApp()
+    setCustomOutputDir("../../%s" % getVisionBinDirectory(platform, compiler, compilerVersion, linktype, renderer, rootRel=False))
+    if usage in ("release", "external"):
+        addIncludePath("$(VISION_SDK)/Source")
+        addLibraryPath("$(VISION_SDK)/%s" % getVisionLibDirectory(platform, compiler, compilerVersion, linktype))
+    else:
+        addIncludePath("./" + REL_HAVOK_ROOT + "/Source")
+        addLibraryPath("./" + REL_HAVOK_ROOT + "/Source/Vision/Samples/Templates/Project_Template/%s" % getVisionBinDirectory(platform, compiler, compilerVersion, linktype, renderer, rootRel=False))
+    for path in getFmodIncludePaths():
+        addIncludePath(path)
+    for path in getFmodLibraryPaths():
+        addLibraryPath(path)
+    for lib in getFmodLibraries():
+        addLibrary(lib)
+    
+    addDefine("USE_HAVOK")    
+    addLinkDependency("Source/Vision/Runtime/EnginePlugins/Havok/HavokPhysicsEnginePlugin")
+    addLinkDependency("Source/Vision/Runtime/EnginePlugins/VisionEnginePlugin")
+    addLinkDependency("Source/Vision/Runtime/EnginePlugins/ThirdParty/FmodEnginePlugin")
+    
+    def getSupportedProductsList():
+        if "anarchy" in compilerVersion or (usage and usage not in ("release", "external")):
+            return ['PHYSICS_2012', 'ANIMATION', 'BEHAVIOR', 'AI']
+        else:
+            return ['PHYSICS_2012']
+    for dependency in getHavokDependencies(getSupportedProductsList()):
+        addLinkDependency(dependency)
+        
+    if "anarchy" in compilerVersion or (usage and usage not in ("release", "external")):
+        addLinkDependency("Source/Vision/Runtime/EnginePlugins/Havok/HavokAiEnginePlugin")
+        addLinkDependency("Source/Vision/Runtime/EnginePlugins/Havok/HavokBehaviorEnginePlugin")
+    if "anarchy" in compilerVersion:
+        addLinkDependency("Source/Vision/Runtime/EnginePlugins/ThirdParty/ScaleformEnginePlugin")
+        addLinkDependency("Source/Vision/Runtime/EnginePlugins/ThirdParty/ScaleformUtils")
+        for path in getScaleformLibraryPaths():
+            addLibraryPath(path)
+        for lib in getScaleformLibraries():
+            addLibrary(lib)
+        addDefine("CURL_STATICLIB")
+        for path in getCurlLibraryPaths():
+            addLibraryPath(path)
+        for library in getCurlLibraries():
+            addLibrary(library)     
+        
+    addDependency("Source/Vision/Samples/Templates/Project_Template/Source/LuaSwigTestEnginePlugin")
+
+    if usage and usage in ("release", "external"):
+        # For release added source and libraries need to be relative to the VISION_SDK
+        # and the project Template folder.
+        # For internal builds the paths to the branch root are used.
+        addFramework("OpenGLES")
+        addFramework("UIKit")
+        addFramework("Foundation")
+        addFramework("QuartzCore")
+        addFramework("CoreData")
+        addFramework("SystemConfiguration")
+        addFramework("AudioToolbox")
+        
+        addSourceFileNoVerify("iOS/VisAppDelegateIOS.h")
+        addSourceFileNoVerify("iOS/VisAppDelegateIOS.m")
+        addSourceFileNoVerify("iOS/VisEAGLViewIOS.h")
+        addSourceFileNoVerify("iOS/VisEAGLViewIOS.m")
+        addSourceFileNoVerify("iOS/VisMainIOS.m")
+        addSourceFileNoVerify("iOS/VisViewControllerIOS.h")
+        addSourceFileNoVerify("iOS/VisViewControllerIOS.m")
+        addSourceFileNoVerify("iOS/VisUncaughtExceptionHandler.h")
+        addSourceFileNoVerify("iOS/VisUncaughtExceptionHandler.m")
+        addSourceFileNoVerify("iOS/VisAppSettings.h")
+        addXibFileNoVerify("iOS/VisMainWindowIOS.xib")
+        addXibFileNoVerify("iOS/VisViewControllerIOS.xib")
+
+        # Same files added by addIosAppSource() but without verify
+        setPlist("../../Data/Common/iOS/Samples-Info.plist")
+        addIcon("../../Data/Common/iOS/Resources/Icon.png")
+        addIcon("../../Data/Common/iOS/Resources/Icon@2x.png")
+        addIcon("../../Data/Common/iOS/Resources/Icon-72.png")
+        
+        addIcon("../../Data/Common/iOS/Resources/Default-Landscape@2x~ipad.png")
+        addIcon("../../Data/Common/iOS/Resources/Default-Landscape~ipad.png")
+        addIcon("../../Data/Common/iOS/Resources/Default-Portrait@2x~ipad.png")
+        addIcon("../../Data/Common/iOS/Resources/Default-Portrait~ipad.png")
+        addIcon("../../Data/Common/iOS/Resources/Default-568h@2x~iphone.png")
+        addIcon("../../Data/Common/iOS/Resources/Default@2x~iphone.png")
+        addIcon("../../Data/Common/iOS/Resources/Default~iphone.png")
+        RESOURCE_KWARGS["customHavokRootDir"] = "$VISION_SDK"        
+    else:
+        addIosAppSource()
+        addIosDefaultResources()
+        addFramework("AudioToolbox")
+        RESOURCES = [(os.path.join(REL_HAVOK_ROOT, "Data/Vision/Base/"), "Data/Vision/Base/"), ("../../Assets/", "Data/Assets/")]
+
+elif isAndroid():
+    # Use property sheet for majority of settings. So they don't need to be defined here.
+    setPropertySheet(getPropertySheetName("Application"))
+    addDependency("Source/Vision/Samples/Templates/Project_Template/Source/LuaSwigTestEnginePlugin")
+    addSourceFile("$(NDKROOT)/sources/android/native_app_glue/android_native_app_glue.c")
+    if usage and usage in ("release", "external"):
+        addSourceFileNoVerify("Android/VNativeDialogAndroid.java")
+        addSourceFileNoVerify("Android/VirtualKeyboardActivity.java")
+    else:
+        addSourceFile(os.path.join(REL_HAVOK_ROOT, "Source/Vision/Runtime/Common/Android/VNativeDialogAndroid.java"))
+        addSourceFile(os.path.join(REL_HAVOK_ROOT, "Source/Vision/Runtime/Common/Android/VirtualKeyboardActivity.java"))
+    configureModule("stlType", "stlport_static")
+    setType('app')
+elif isTizen():
+    # Use property sheet for majority of settings. So they don't need to be defined here.
+    setPropertySheet(getPropertySheetName("Application"))
+    addDependency("Source/Vision/Samples/Templates/Project_Template/Source/LuaSwigTestEnginePlugin")
+
+
+if usage and usage in ("release", "external"):
+    setPackageBuildLinktypes([])
+processResources(RESOURCES, **RESOURCE_KWARGS)
+addVisionTemplatesDistSteps()
+
+#
+# Havok SDK - Base file, BUILD(#20140805)
+# 
+# Confidential Information of Havok.  (C) Copyright 1999-2014
+# Telekinesys Research Limited t/a Havok. All Rights Reserved. The Havok
+# Logo, and the Havok buzzsaw logo are trademarks of Havok.  Title, ownership
+# rights, and intellectual property rights in the Havok software remain in
+# Havok and/or its suppliers.
+# 
+# Use of this software for evaluation purposes is subject to and indicates
+# acceptance of the End User licence Agreement for this product. A copy of
+# the license is included with this software and is also available from salesteam@havok.com.
+# 
+#

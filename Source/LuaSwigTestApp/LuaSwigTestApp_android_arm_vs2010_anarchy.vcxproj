@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    
+    
+    
+    SOURCE_LEVEL = "PUBLIC"
+    REQUIRED_HAVOK_PRODUCTS = "VISION"
+  -->
+        
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|hkAndroid">
+      <Configuration>Debug</Configuration>
+      <Platform>hkAndroid</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dev|hkAndroid">
+      <Configuration>Dev</Configuration>
+      <Platform>hkAndroid</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|hkAndroid">
+      <Configuration>Release</Configuration>
+      <Platform>hkAndroid</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}</ProjectGuid>
+    <TargetFrameworkVersion></TargetFrameworkVersion>
+    <Keyword>Application</Keyword>
+    <RootNamespace></RootNamespace>
+    <ProjectName>LuaSwigTestApp</ProjectName>
+    
+  </PropertyGroup>
+<Import Project="$(VISION_SDK)\Build\MSBuild\Microsoft.Cpp.Default.props" />
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">
+        <Import Project="$(VISION_SDK)\Build\Vision\PropertySheets\Application_android_arm_vs2010_anarchyDebug.props" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">
+        <Import Project="$(VISION_SDK)\Build\Vision\PropertySheets\Application_android_arm_vs2010_anarchyDev.props" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">
+        <Import Project="$(VISION_SDK)\Build\Vision\PropertySheets\Application_android_arm_vs2010_anarchyRelease.props" />
+    </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
+    <AndroidAPILevel>android-10</AndroidAPILevel>
+    <AndroidArch>armv7-a</AndroidArch>
+    <AndroidStlType>stlport_static</AndroidStlType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
+    <AndroidAPILevel>android-10</AndroidAPILevel>
+    <AndroidArch>armv7-a</AndroidArch>
+    <AndroidStlType>stlport_static</AndroidStlType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>arm-linux-androideabi-4.8</PlatformToolset>
+    <AndroidAPILevel>android-10</AndroidAPILevel>
+    <AndroidArch>armv7-a</AndroidArch>
+    <AndroidStlType>stlport_static</AndroidStlType>
+  </PropertyGroup>
+  <Import Project="$(VISION_SDK)\Build\MSBuild\Microsoft.Cpp.props" />
+  <PropertyGroup>
+<TargetExt  Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">.so</TargetExt>
+<TargetExt  Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">.so</TargetExt>
+<TargetExt  Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">.so</TargetExt>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">../../Obj/android_arm_vs2010_anarchy/Debug/LuaSwigTestApp\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">../../Bin/android_arm_vs2010_anarchy/Debug\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">LuaSwigTestApp</TargetName>
+    <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">../../Obj/android_arm_vs2010_anarchy/Dev/LuaSwigTestApp\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">../../Bin/android_arm_vs2010_anarchy/Dev\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">LuaSwigTestApp</TargetName>
+    <OutputFile Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">../../Obj/android_arm_vs2010_anarchy/Release/LuaSwigTestApp\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">../../Bin/android_arm_vs2010_anarchy/Release\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">LuaSwigTestApp</TargetName>
+    <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'"></LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'"></LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'"></LinkIncremental>
+  </PropertyGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">
+        <Link>
+            <AdditionalDependencies>-lLuaSwigTestEnginePlugin;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">
+        <Link>
+            <AdditionalDependencies>-lLuaSwigTestEnginePlugin;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">
+        <Link>
+            <AdditionalDependencies>-lLuaSwigTestEnginePlugin;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="LuaSwigTestAppPCH.h">
+        <DeploymentContent>False</DeploymentContent></ClInclude>
+    <ClCompile Include="$(NDKROOT)\sources\android\native_app_glue\android_native_app_glue.c">
+        <CompileAsWinRT>false</CompileAsWinRT>
+        <AdditionalOptions> </AdditionalOptions>
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+    <Java Include="Android/VirtualKeyboardActivity.java"><DeploymentContent>False</DeploymentContent></Java>
+    <Java Include="Android/VNativeDialogAndroid.java"><DeploymentContent>False</DeploymentContent></Java>
+    <ClCompile Include="Main.cpp">
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+    <ClCompile Include="LuaSwigTestAppPCH.cpp">
+        <DeploymentContent>False</DeploymentContent></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+<Import Project="$(VISION_SDK)\Build\MSBuild\Microsoft.Cpp.targets" />
+<PropertyGroup>
+    <CleanDependsOn>LuaSwigTestApp_CleanReflections;$(CleanDependsOn)</CleanDependsOn>
+</PropertyGroup>
+<Target Name="LuaSwigTestApp_CleanReflections">
+    <Delete Files="$(MSBuildProjectDirectory)\reflectionSettings.cache;$(MSBuildProjectDirectory)\reflections.db" />
+</Target>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|hkAndroid'">
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|hkAndroid'">
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|hkAndroid'">
+</PropertyGroup>
+<PropertyGroup>
+</PropertyGroup>
+</Project>

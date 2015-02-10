@@ -1,0 +1,73 @@
+﻿# YAML
+bool: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+CSharpFramework.Math.Vector3F: CSharpFramework.Math.Vector3F, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.View.Grid: CSharpFramework.View.Grid, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.View.GridSettings: CSharpFramework.View.GridSettings, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+CSharpFramework.View.GridSettings.GridRenderMode: CSharpFramework.View.GridSettings+GridRenderMode, CSharpFramework, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+Editor.EditorSceneSettings: Editor.EditorSceneSettings, vForge, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+Editor.ScreenshotSettings: Editor.ScreenshotSettings, vForge, Version=2014.1.0.1, Culture=neutral, PublicKeyToken=null
+float: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+int: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+long: System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+short: System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+string: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+System.Drawing.Color: System.Drawing.Color, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.Type: System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+...
+---
+- &414b759d899a4ee39c480c30320674b2 !Editor.EditorSceneSettings
+  _showDescAtStartup: !bool True
+  _vLuxSettingsFile: null
+  _bUseDefaultvLuxSettingsFile: !bool True
+  _shapeOrigin: !CSharpFramework.Math.Vector3F
+    X: !float 0
+    Y: !float 0
+    Z: !float 0
+  _cameraPosition: !CSharpFramework.Math.Vector3F
+    X: !float 190.8341
+    Y: !float 368.9588
+    Z: !float 321.126038
+  _cameraAngles: !CSharpFramework.Math.Vector3F
+    X: !float -115
+    Y: !float 36
+    Z: !float 0
+  _gridSettings: *8eb23afcbe0446df8203c7b8842b790c
+  _exportProfileName: !string default
+  _autoSaveExportProfile: !bool False
+  _screenshotSettings: *5f1164e4bac341df8b0ab97b50aa636e
+- &8cc494c28ecd4982b85616c0b4bc71ca !CSharpFramework.View.Grid
+  bEnabled: !bool True
+  fSpacing: !float 1
+  fRenderOffset: !float 0
+  iRenderHighlight: !int 10
+  bSnapRenderOffset: !bool True
+  LineColor: !System.Drawing.Color
+    name: null
+    value: !long 4286611584
+    knownColor: !short 0
+    state: !short 2
+- &f2c460d44a7f4a31afcca1231328d79f !CSharpFramework.View.Grid
+  bEnabled: !bool False
+  fSpacing: !float 50
+  fRenderOffset: !float 0
+  iRenderHighlight: !int 10
+  bSnapRenderOffset: !bool True
+  LineColor: !System.Drawing.Color
+    name: null
+    value: !long 4286611584
+    knownColor: !short 0
+    state: !short 2
+- &8eb23afcbe0446df8203c7b8842b790c !CSharpFramework.View.GridSettings
+  MoveGrid: *f2c460d44a7f4a31afcca1231328d79f
+  RotateGrid: *8cc494c28ecd4982b85616c0b4bc71ca
+  GridRenderMode: !CSharpFramework.View.GridSettings.GridRenderMode Disabled
+- &5f1164e4bac341df8b0ab97b50aa636e !Editor.ScreenshotSettings
+  _directory: !string D:\files\development\code\vision\LuaSwigTest\Assets
+  _fileName: !string ScreenShot
+  _fileExtension: !string .png
+  _fovX: !float 90
+  _useCustomViewport: !bool False
+  _viewportHeight: !int 4096
+  _viewportWidth: !int 4096
+  _openExternally: !bool True
+...

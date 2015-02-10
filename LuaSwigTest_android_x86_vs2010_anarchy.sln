@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaSwigTestApp", "Source\LuaSwigTestApp\LuaSwigTestApp_android_x86_vs2010_anarchy.vcxproj", "{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5843C197-7531-495E-95D9-2033A04BC440} = {5843C197-7531-495E-95D9-2033A04BC440}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaSwigTestEnginePlugin", "Source\LuaSwigTestEnginePlugin\LuaSwigTestEnginePlugin_android_x86_vs2010_anarchy.vcxproj", "{5843C197-7531-495E-95D9-2033A04BC440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|hkAndroid = Debug|hkAndroid
+		Dev|hkAndroid = Dev|hkAndroid
+		Release|hkAndroid = Release|hkAndroid
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Debug|hkAndroid.ActiveCfg = Debug|hkAndroid
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Debug|hkAndroid.Build.0 = Debug|hkAndroid
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Dev|hkAndroid.ActiveCfg = Dev|hkAndroid
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Dev|hkAndroid.Build.0 = Dev|hkAndroid
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Release|hkAndroid.ActiveCfg = Release|hkAndroid
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950}.Release|hkAndroid.Build.0 = Release|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Debug|hkAndroid.ActiveCfg = Debug|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Debug|hkAndroid.Build.0 = Debug|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Dev|hkAndroid.ActiveCfg = Dev|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Dev|hkAndroid.Build.0 = Dev|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Release|hkAndroid.ActiveCfg = Release|hkAndroid
+		{5843C197-7531-495E-95D9-2033A04BC440}.Release|hkAndroid.Build.0 = Release|hkAndroid
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A217CC9E-F107-4465-BD0B-6C653EBFC052} = {2CCCC932-BF7E-4C63-865C-0A9A76E04358}
+		{2274A186-98B7-49DF-BE71-152A210886E6} = {A217CC9E-F107-4465-BD0B-6C653EBFC052}
+		{3C6B67FB-673E-467A-9F1B-F92CD1D441B4} = {2274A186-98B7-49DF-BE71-152A210886E6}
+		{E00CE6BE-FA4E-430C-B404-9E88DCC3D950} = {3C6B67FB-673E-467A-9F1B-F92CD1D441B4}
+		{5843C197-7531-495E-95D9-2033A04BC440} = {3C6B67FB-673E-467A-9F1B-F92CD1D441B4}
+	EndGlobalSection
+EndGlobal
