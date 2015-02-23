@@ -3,3 +3,5 @@
 /Bin/
 /Lib/
 /Obj/
+*.sdf
+*.opensdf

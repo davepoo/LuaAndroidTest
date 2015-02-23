@@ -1,12 +1,14 @@
 # LuaAndroidTest
 Test project to reproduce differences in results of project anarchy scripting on Win32 and Android build
 
+Setup: run the RUN_ONCE.bat to install the `\Data` folder from your Project Anarchy installation.
+
 # Test Scene Expected Behavior
 1. The scene should spawn 3 cubes in the middle of the scene every 1.0 seconds from a prefab.
 1. The cube has a physics body and should move up a little then fall to the floor.
 1. The cubes will be removed after they have been alive for 1.8 seconds
 
-# Behavior on Android (Tested on x86 build)
+# Behavior on Android (Tested on x86 and Arm build)
 Most of the time, less than 3 entities will appear spawn.
 The longer the build is run for, the less entities will spawn.
 It appears that they are spawning and being removed instantly.

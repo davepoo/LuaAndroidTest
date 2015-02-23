@@ -29,3 +29,9 @@ REM - Start copy (Base data)
 set SRC_DIR=%VISION_SDK%\Data\Vision\Base
 md Data\Vision\Base
 xcopy "%SRC_DIR%" /S "%ROOT_DIR%\Data\Vision\Base" /Y
+
+REM - Start copy (Icons for various platforms)
+
+set SRC_DIR=%VISION_SDK%\Data\Common
+md Data\Common
+IF EXIST "%SRC_DIR%" xcopy "%SRC_DIR%" /S "%ROOT_DIR%\Data\Common" /Y 
