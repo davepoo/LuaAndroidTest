@@ -34,10 +34,11 @@ This build contains no custom swig wrappers, or any custom C++ code. The project
 
 Tried building using the following toolsets:
 
-- Android SDK Build Tools 19.0.1, 19.0.3, 19.1, 21.1.2
-- Java JDK 1.6.0_45, 1.7.0_45, 1.7.0_76
-- Android NDK r9, r9d and r10b
+- Android SDK Build Tools - 19.0.1, 19.0.3, 19.1, 21.1.2
+- Java JDK - 1.6.0_45, 1.7.0_45, 1.7.0_76
+- Android NDK - r9, r9c, r9d and r10b
 
+Also tried older Project Anarchy version 2013.2.5.1 and got the same result
 
 
 # Logging OnObjectDeleted Callback
